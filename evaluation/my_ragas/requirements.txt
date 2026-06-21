@@ -5,5 +5,5 @@ langchain-community==0.2.15
 langchain-core==0.2.37
 langchain-experimental==0.0.64
 langchain-openai==0.1.23
-langchain-text-splitters==0.2.0
+langchain-text-splitters==1.1.2
 langchainhub==0.1.16

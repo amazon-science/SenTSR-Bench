@@ -1,0 +1,57 @@
+# Data files
+dataset/*.json
+
+# Cache and generated files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Logging
+*.log
+logs/
+nohup.out
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Result files
+evaluation/results/
+*.csv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Keep dataset README
+!dataset/README.md
+
+# Keep configuration files
+!evaluation/my_ragas/data/gt_cache.json

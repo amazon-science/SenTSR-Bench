@@ -1,0 +1,52 @@
+# ────────────────────────────────────────────────────────────────────────────────
+# (unchanged) global settings
+data_dir              = "./evaluation/my_ragas/data"
+default_quota         = 150
+submission_interval   = 10
+
+[judge]
+enabled              = true
+max_workers          = 8
+correct_threshold    = 0.6
+max_retries          = 3
+max_execution_time   = 60
+report_metric        = "score"
+
+[langsmith]
+enabled              = false
+api_key              = ""
+project_name         = ""
+endpoint             = "https://api.smith.langchain.com"
+
+# ────────────────────────────────────────────────────────────────────────────────
+# Use AWS Bedrock
+[models]
+llm_type             = "bedrock"
+# 0818 - switch to 3.7 - inductive drop         
+# llm_model            = "us.anthropic.claude-3-7-sonnet-20250219-v1:0"   
+llm_model            = "us.anthropic.claude-3-5-haiku-20241022-v1:0"
+# AWS credentials/profile + region for Bedrock
+bedrock_profile      = "default"                # ~/.aws/credentials profile
+bedrock_region       = "us-west-2"              # the AWS region where Bedrock is served
+
+# Any extra kwargs
+[models.bedrock_kwargs]
+temperature          = 0.4
+
+# ────────────────────────────────────────────────────────────────────────────────
+# Embeddings: also via Bedrock
+[embedding]
+emb_type             = "bedrock"                
+embeddings_model     = "amazon.titan-embed-text" # or whichever Bedrock embed model you prefer
+
+# AWS credentials/profile + region for embeddings
+bedrock_profile      = "default"
+bedrock_region       = "us-west-2"
+
+# ────────────────────────────────────────────────────────────────────────────────
+[cms]
+enabled              = false
+interval             = 10
+contest_id           = ""
+username             = ""
+password             = ""

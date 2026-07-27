@@ -1,7 +1,7 @@
 ragas==0.1.9
 langchain==0.2.15
 langchain-chroma==0.1.1
-langchain-community==0.2.15
+langchain-community==0.3.27
 langchain-core==0.2.37
 langchain-experimental==0.0.64
 langchain-openai==0.1.23
